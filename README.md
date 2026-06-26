@@ -9,7 +9,7 @@ CF-Fusion is a replication package for confidence-driven DNN-LLM collaborative c
 - `dataset/*.json`: extracted features and metadata
 - `dataset/labels_*.txt`: labels
 - `fold_splits/`: five-fold split indexes
-- `results/` and `results_weighted/`: fold outputs and configs
+- `results/` and `results_weighted/`: fold-specific fusion configs
 - `thresholds_weighted/`: fold-specific thresholds
 
 ### Excluded
@@ -39,13 +39,13 @@ Train the DNN:
 python deepLearningDetectionX5.py --smell feature_envy
 ```
 
-Generate weighted configs:
+Generate one weighted config:
 
 ```bash
 python generate_config_weighted.py --smell-type feature_envy --fold 1 --results-dir results_weighted
 ```
 
-Run all folds in PowerShell:
+Generate all folds for one smell type in PowerShell:
 
 ```powershell
 1..5 | ForEach-Object { python generate_config_weighted.py --smell-type feature_envy --fold $_ --results-dir results_weighted }
@@ -71,7 +71,7 @@ results_weighted/{smell_type}_fold{fold_idx}_config.json
 - `dataset/*.json`：特征与元数据
 - `dataset/labels_*.txt`：标签
 - `fold_splits/`：五折划分索引
-- `results/` 和 `results_weighted/`：各 fold 的输出与配置
+- `results/` 和 `results_weighted/`：逐 fold 融合配置
 - `thresholds_weighted/`：逐 fold 阈值
 
 ### 不包含内容
@@ -101,13 +101,13 @@ $env:SILICONFLOW_API_KEY="<your_siliconflow_api_key>"
 python deepLearningDetectionX5.py --smell feature_envy
 ```
 
-生成加权配置：
+生成单个加权配置：
 
 ```bash
 python generate_config_weighted.py --smell-type feature_envy --fold 1 --results-dir results_weighted
 ```
 
-PowerShell 一次生成全部 fold：
+PowerShell 一次生成某一种坏味的全部 fold：
 
 ```powershell
 1..5 | ForEach-Object { python generate_config_weighted.py --smell-type feature_envy --fold $_ --results-dir results_weighted }
