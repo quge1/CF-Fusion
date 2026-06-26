@@ -1,0 +1,112 @@
+{
+  "smell_type": "feature_envy",
+  "fold": 5,
+  "all_zone_range": "0.51-0.69",
+  "risk_zones": [
+    {
+      "zone_id": "0.5084-0.5384",
+      "accuracy": 0.167,
+      "sample_count": 6,
+      "requires_llm": true
+    },
+    {
+      "zone_id": "0.5384-0.5683",
+      "accuracy": 0.222,
+      "sample_count": 18,
+      "requires_llm": true
+    },
+    {
+      "zone_id": "0.5683-0.5983",
+      "accuracy": 0.24,
+      "sample_count": 25,
+      "requires_llm": true
+    },
+    {
+      "zone_id": "0.5983-0.6282",
+      "accuracy": 0.326,
+      "sample_count": 43,
+      "requires_llm": true
+    },
+    {
+      "zone_id": "0.6282-0.6581",
+      "accuracy": 0.37,
+      "sample_count": 173,
+      "requires_llm": true
+    },
+    {
+      "zone_id": "0.6581-0.6881",
+      "accuracy": 0.509,
+      "sample_count": 216,
+      "requires_llm": true
+    }
+  ],
+  "confidence_mapping": {
+    "exact_values": {
+      "0.25": 0.3308169364929199,
+      "0.28": 0.35413705015182495,
+      "0.35": 0.4109288620948791,
+      "0.62": 0.6600685634613037,
+      "0.63": 0.7004150590896606,
+      "0.68": 0.6731744112968445
+    },
+    "interpolation_ranges": [
+      {
+        "llm_min": 0.25,
+        "llm_max": 0.28,
+        "dnn_min": 0.3308169364929199,
+        "dnn_max": 0.35413705015182495
+      },
+      {
+        "llm_min": 0.28,
+        "llm_max": 0.35,
+        "dnn_min": 0.35413705015182495,
+        "dnn_max": 0.4109288620948791
+      },
+      {
+        "llm_min": 0.35,
+        "llm_max": 0.62,
+        "dnn_min": 0.4109288620948791,
+        "dnn_max": 0.6600685634613037
+      },
+      {
+        "llm_min": 0.62,
+        "llm_max": 0.63,
+        "dnn_min": 0.6600685634613037,
+        "dnn_max": 0.7004150590896606
+      },
+      {
+        "llm_min": 0.63,
+        "llm_max": 0.68,
+        "dnn_min": 0.7004150590896606,
+        "dnn_max": 0.6731744112968445
+      }
+    ],
+    "boundaries": {
+      "min_llm": 0.25,
+      "max_llm": 0.68,
+      "min_dnn": 0.3308169364929199,
+      "max_dnn": 0.7004150590896606
+    },
+    "sample_count": 423,
+    "cold_start_excluded": 50
+  },
+  "fusion_weights": {
+    "alpha": 0.55,
+    "beta": 0.45,
+    "best_f1": 0.5418,
+    "dnn_accuracy": 0.4468,
+    "llm_accuracy": 0.5414,
+    "threshold": 0.5,
+    "total_samples": 423,
+    "llm_samples": 423,
+    "cold_start_excluded": 50
+  },
+  "metadata": {
+    "training_samples": 2041,
+    "llm_outputs": 434,
+    "exact_mappings": 6,
+    "interpolation_ranges": 5,
+    "config_generated_at": "2026-04-21T15:37:37.926918",
+    "based_on_fold": 5
+  }
+}

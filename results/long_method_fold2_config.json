@@ -1,0 +1,105 @@
+{
+  "smell_type": "long_method",
+  "fold": 2,
+  "all_zone_range": "0.48-0.67",
+  "risk_zones": [
+    {
+      "zone_id": "0.4829-0.5134",
+      "accuracy": 0.471,
+      "sample_count": 17,
+      "requires_llm": true
+    },
+    {
+      "zone_id": "0.5134-0.5440",
+      "accuracy": 0.267,
+      "sample_count": 15,
+      "requires_llm": true
+    },
+    {
+      "zone_id": "0.5440-0.5746",
+      "accuracy": 0.364,
+      "sample_count": 22,
+      "requires_llm": true
+    },
+    {
+      "zone_id": "0.5746-0.6051",
+      "accuracy": 0.423,
+      "sample_count": 26,
+      "requires_llm": true
+    },
+    {
+      "zone_id": "0.6051-0.6357",
+      "accuracy": 0.5,
+      "sample_count": 22,
+      "requires_llm": true
+    },
+    {
+      "zone_id": "0.6357-0.6662",
+      "accuracy": 0.463,
+      "sample_count": 41,
+      "requires_llm": true
+    }
+  ],
+  "confidence_mapping": {
+    "exact_values": {
+      "0.25": 0.31606208086013793,
+      "0.28": 0.34699439907073976,
+      "0.35": 0.4117698240280151,
+      "0.62": 0.6108009657859802,
+      "0.68": 0.6673720064163209
+    },
+    "interpolation_ranges": [
+      {
+        "llm_min": 0.25,
+        "llm_max": 0.28,
+        "dnn_min": 0.31606208086013793,
+        "dnn_max": 0.34699439907073976
+      },
+      {
+        "llm_min": 0.28,
+        "llm_max": 0.35,
+        "dnn_min": 0.34699439907073976,
+        "dnn_max": 0.4117698240280151
+      },
+      {
+        "llm_min": 0.35,
+        "llm_max": 0.62,
+        "dnn_min": 0.4117698240280151,
+        "dnn_max": 0.6108009657859802
+      },
+      {
+        "llm_min": 0.62,
+        "llm_max": 0.68,
+        "dnn_min": 0.6108009657859802,
+        "dnn_max": 0.6673720064163209
+      }
+    ],
+    "boundaries": {
+      "min_llm": 0.25,
+      "max_llm": 0.68,
+      "min_dnn": 0.31606208086013793,
+      "max_dnn": 0.6673720064163209
+    },
+    "sample_count": 111,
+    "cold_start_excluded": 50
+  },
+  "fusion_weights": {
+    "alpha": 0.75,
+    "beta": 0.25,
+    "best_f1": 0.6207,
+    "dnn_accuracy": 0.4414,
+    "llm_accuracy": 0.5676,
+    "threshold": 0.5,
+    "total_samples": 111,
+    "llm_samples": 111,
+    "cold_start_excluded": 50
+  },
+  "metadata": {
+    "training_samples": 2056,
+    "llm_outputs": 111,
+    "exact_mappings": 5,
+    "interpolation_ranges": 4,
+    "config_generated_at": "2026-04-21T15:46:15.009469",
+    "based_on_fold": 2
+  }
+}

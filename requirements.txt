@@ -1,0 +1,19 @@
+# 核心深度学习框架
+torch>=2.0.0
+numpy>=1.24.0
+
+# 机器学习评估
+scikit-learn>=1.3.0
+scipy>=1.11.0
+
+# HTTP请求（LLM API调用）
+requests>=2.31.0
+
+# 系统监控与进度条
+psutil>=5.9.0
+tqdm>=4.65.0
+
+# 可视化与数据分析（可选，用于画图和统计）
+matplotlib>=3.7.0
+seaborn>=0.12.0
+pandas>=2.0.0
